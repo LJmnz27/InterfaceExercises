@@ -12,6 +12,7 @@ import org.pursuit.fragmentinterfaceexercise.view.SimpleViewHolder;
 
 public class SimpleRVAdapter extends RecyclerView.Adapter<SimpleViewHolder>{
     private String[] dataSource;
+    private FragmentInterface fragmentInterface;
 
     public SimpleRVAdapter(String[] numbers){
         dataSource = numbers;
@@ -33,5 +34,9 @@ public class SimpleRVAdapter extends RecyclerView.Adapter<SimpleViewHolder>{
     @Override
     public int getItemCount() {
         return dataSource.length;
+    }
+
+    private interface FragmentInterface {
+        void toEndingFragment();
     }
 }
